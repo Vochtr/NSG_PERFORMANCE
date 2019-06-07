@@ -1,0 +1,29 @@
+---
+nsg_templates:
+
+  template1:
+    name: {{ test_prefix }}_T1
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+    port4:
+      name: P4
+    port5:
+      name: P5
+    port6:
+      name: P6
+
+nsgs:
+  nsg1:
+    template:
+      name: {{ test_prefix }}_T1
+    name: NSGUBR1
+    port1_bridge: br4
+    port2_bridge: br4
+    port3_bridge: br5
+    port4_bridge: br5
+    port5_bridge: br5
+    port6_bridge: br5 

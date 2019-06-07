@@ -1,0 +1,15 @@
+nuage_zipped_files_dir: /SharedNFS/ISOs-and-Software/Nuage_Software/5.1.2
+nuage_unzipped_files_dir: /home/vochtr/vnspoc/5.1.2/unzip
+target_server_username: root
+ansible_sudo_username: root
+vns_operations_list: [install]
+mynsgvs:
+- {hostname: NSGUBR1, cats_nsg_name: NSGUBR1, target_server_type: kvm, target_server: 10.167.53.5,
+  bootstrap_method: zfb_external, iso_path: /var/lib/libvirt/images/zfbisos, iso_file: CUST-B_ORG_NSGUBR1_20180501122310_zfb.iso,
+  port1_bridge: br4, port2_bridge: br4, port3_bridge: br5, port4_bridge: br5, port5_bridge: br5,
+  port6_bridge: br5}
+ansible_deployment_host: 10.167.53.5
+images_path: /var/lib/libvirt/images/
+mgmt_bridge: br9
+data_bridge: br9
+access_bridge: br9
