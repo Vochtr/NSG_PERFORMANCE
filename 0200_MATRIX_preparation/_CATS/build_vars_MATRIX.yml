@@ -1,0 +1,31 @@
+nuage_zipped_files_dir: /SharedNFS/ISOs-and-Software/Nuage_Software/5.4.1-Beta2/
+nuage_unzipped_files_dir: /SharedNFS/ISOs-and-Software/Nuage_Software/5.4.1-Beta2/unzip/
+target_server_username: root
+ansible_sudo_username: root
+vns_operations_list: [install]
+mynsgvs:
+- {hostname: MATRIX_NSGv01, cats_nsg_name: MATRIX_NSGv01, target_server_type: kvm,
+  target_server: 10.169.46.4, bootstrap_method: zfb_external, iso_path: /var/lib/libvirt/images/zfbisos,
+  iso_file: MATRIX_ORG_MATRIX_NSGv01_20190301205705_zfb.iso, port1_bridge: br3, port2_bridge: br8,
+  port3_bridge: br7, port4_bridge: brM01, port5_bridge: br9, port6_bridge: br9}
+- {hostname: MATRIX_NSGv02, cats_nsg_name: MATRIX_NSGv02, target_server_type: kvm,
+  target_server: 10.169.46.4, bootstrap_method: zfb_external, iso_path: /var/lib/libvirt/images/zfbisos,
+  iso_file: MATRIX_ORG_MATRIX_NSGv02_20190301205706_zfb.iso, port1_bridge: br3, port2_bridge: br8,
+  port3_bridge: br7, port4_bridge: brM02, port5_bridge: br9, port6_bridge: br9}
+- {hostname: MATRIX_NSGv03, cats_nsg_name: MATRIX_NSGv03, target_server_type: kvm,
+  target_server: 10.169.46.4, bootstrap_method: zfb_external, iso_path: /var/lib/libvirt/images/zfbisos,
+  iso_file: MATRIX_ORG_MATRIX_NSGv03_20190301205707_zfb.iso, port1_bridge: br3, port2_bridge: br8,
+  port3_bridge: br7, port4_bridge: brM03, port5_bridge: br9, port6_bridge: br9}
+- {hostname: MATRIX_NSGv04, cats_nsg_name: MATRIX_NSGv04, target_server_type: kvm,
+  target_server: 10.169.46.4, bootstrap_method: zfb_external, iso_path: /var/lib/libvirt/images/zfbisos,
+  iso_file: MATRIX_ORG_MATRIX_NSGv04_20190301205707_zfb.iso, port1_bridge: br3, port2_bridge: br8,
+  port3_bridge: br7, port4_bridge: brM04, port5_bridge: br9, port6_bridge: br9}
+- {hostname: MATRIX_NSGv05, cats_nsg_name: MATRIX_NSGv05, target_server_type: kvm,
+  target_server: 10.169.46.4, bootstrap_method: zfb_external, iso_path: /var/lib/libvirt/images/zfbisos,
+  iso_file: MATRIX_ORG_MATRIX_NSGv05_20190301205708_zfb.iso, port1_bridge: br3, port2_bridge: br8,
+  port3_bridge: br7, port4_bridge: brM05, port5_bridge: br9, port6_bridge: br9}
+ansible_deployment_host: 10.169.46.4
+images_path: /var/lib/libvirt/images/
+mgmt_bridge: br3
+data_bridge: br3
+access_bridge: br3

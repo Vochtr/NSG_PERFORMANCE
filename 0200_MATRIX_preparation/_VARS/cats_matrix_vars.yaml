@@ -1,0 +1,391 @@
+---
+nsg_templates:
+  template1:
+    name: {{ test_prefix }}_NSGv_6P_S
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+    port4:
+      name: P4
+    port5:
+      name: P5
+    port6:
+      name: P6
+  template2:
+    name: {{ test_prefix }}_NSGv_6P_D
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+    port4:
+      name: P4
+    port5:
+      name: P5
+    port6:
+      name: P6
+  template3:
+    name: {{ test_prefix }}_NSGv_3P_S
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+  template4:
+    name: {{ test_prefix }}_NSGv_3P_D
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+  template5:
+    name: {{ test_prefix }}_NSG_6P_S
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+    port4:
+      name: P4
+    port5:
+      name: P5
+    port6:
+      name: P6
+  template6:
+    name: {{ test_prefix }}_NSG_6P_D
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+    port4:
+      name: P4
+    port5:
+      name: P5
+    port6:
+      name: P6
+  template7:
+    name: {{ test_prefix }}_NSG_3P_S
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+  template8:
+    name: {{ test_prefix }}_NSG_3P_D
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+nsgs:
+# this nsg will be activated
+  nsg1:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv01
+    port4_bridge: brM01
+
+  nsg2:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv02
+    port4_bridge: brM02
+  
+  nsg3:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv03
+    port4_bridge: brM03
+
+  nsg4:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv04
+    port4_bridge: brM04
+
+  nsg5:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv05
+    port4_bridge: brM05
+
+  nsg6:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv06
+    port4_bridge: brM06
+
+  nsg7:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv07
+    port4_bridge: brM07
+
+  nsg8:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv08
+    port4_bridge: brM08
+
+  nsg9:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv09
+    port4_bridge: brM09
+     
+  nsg10:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv10
+    port4_bridge: brM10
+
+  nsg11:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv11
+    port4_bridge: brM11
+
+  nsg12:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv12
+    port4_bridge: brM12
+  
+  nsg13:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv13
+    port4_bridge: brM13
+
+  nsg14:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv14
+    port4_bridge: brM14
+
+  nsg15:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv15
+    port4_bridge: brM15
+
+  nsg16:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv16
+    port4_bridge: brM16
+
+  nsg17:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv17
+    port4_bridge: brM17
+
+  nsg18:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv18
+    port4_bridge: brM18
+
+  nsg19:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv19
+    port4_bridge: brM19
+    
+  nsg20:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv20
+    port4_bridge: brM20
+
+  nsg21:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv21
+    port4_bridge: brM21
+
+  nsg22:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv22
+    port4_bridge: brM22
+  
+  nsg23:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv23
+    port4_bridge: brM23
+
+  nsg24:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv24
+    port4_bridge: brM24
+
+  nsg25:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv25
+    port4_bridge: brM25
+
+  nsg26:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv26
+    port4_bridge: brM26
+
+  nsg27:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv27
+    port4_bridge: brM27
+
+  nsg28:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv28
+    port4_bridge: brM28
+
+  nsg29:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv29
+    port4_bridge: brM29
+    
+  nsg30:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv30
+    port4_bridge: brM30
+
+  nsg31:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv31
+    port4_bridge: brM31
+
+  nsg32:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv32
+    port4_bridge: brM32
+  
+  nsg33:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv33
+    port4_bridge: brM33
+
+  nsg34:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv34
+    port4_bridge: brM34
+
+  nsg35:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv35
+    port4_bridge: brM35
+
+  nsg36:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv36
+    port4_bridge: brM36
+
+  nsg37:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv37
+    port4_bridge: brM37
+
+  nsg38:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv38
+    port4_bridge: brM38
+
+  nsg39:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv39
+    port4_bridge: brM39
+   
+  nsg40:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv40
+    port4_bridge: brM40
+
+  nsg41:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv41
+    port4_bridge: brM41
+
+  nsg42:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv42
+    port4_bridge: brM42
+  
+  nsg43:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv43
+    port4_bridge: brM43
+
+  nsg44:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv44
+    port4_bridge: brM44
+
+  nsg45:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv45
+    port4_bridge: brM45
+
+  nsg46:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv46
+    port4_bridge: brM46
+
+  nsg47:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv47
+    port4_bridge: brM47
+
+  nsg48:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv48
+    port4_bridge: brM48
+
+  nsg49:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv49
+    port4_bridge: brM49
+  
+  nsg50:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv50
+    port4_bridge: brM50

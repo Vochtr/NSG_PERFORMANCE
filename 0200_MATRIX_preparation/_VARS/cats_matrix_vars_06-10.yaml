@@ -1,0 +1,121 @@
+---
+nsg_templates:
+  template1:
+    name: {{ test_prefix }}_NSGv_6P_S
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+    port4:
+      name: P4
+    port5:
+      name: P5
+    port6:
+      name: P6
+  template2:
+    name: {{ test_prefix }}_NSGv_6P_D
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+    port4:
+      name: P4
+    port5:
+      name: P5
+    port6:
+      name: P6
+  template3:
+    name: {{ test_prefix }}_NSGv_3P_S
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+  template4:
+    name: {{ test_prefix }}_NSGv_3P_D
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+  template5:
+    name: {{ test_prefix }}_NSG_6P_S
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+    port4:
+      name: P4
+    port5:
+      name: P5
+    port6:
+      name: P6
+  template6:
+    name: {{ test_prefix }}_NSG_6P_D
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+    port4:
+      name: P4
+    port5:
+      name: P5
+    port6:
+      name: P6
+  template7:
+    name: {{ test_prefix }}_NSG_3P_S
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+  template8:
+    name: {{ test_prefix }}_NSG_3P_D
+    port1:
+      name: P1
+    port2:
+      name: P2
+    port3:
+      name: P3
+nsgs:
+# this nsg will be activated
+  nsg6:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv06
+    port4_bridge: brM06
+
+  nsg7:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv07
+    port4_bridge: brM07
+
+  nsg8:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv08
+    port4_bridge: brM08
+
+  nsg9:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv09
+    port4_bridge: brM09
+     
+  nsg10:
+    template:
+      name: {{ test_prefix }}_NSGv_6P_S
+    name:  {{ test_prefix }}_NSGv10
+    port4_bridge: brM10

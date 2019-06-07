@@ -1,0 +1,62 @@
+---
+###
+# See STCV.md for details
+###
+### target_server_type could be kvm or vcenter
+target_server_type: "kvm"
+
+#Hypervisor parameters
+# Paths
+# Path and filename to find image file for stcv
+stcv_image_path: "/SharedNFS/ISOs-and-Software/Spirent/Linux/"
+stcv_image_filename: "stc.img"
+###
+# Usernames
+# remote_user names for ansible to execute as on the target server (hypervisor)
+# and Ansible host. target_server_username is the remote_user for all hypervisors.
+# ansible_sudo_username is the sudo user for local actions.
+target_server_username: "root"
+ansible_sudo_username: "root"
+# Supported target hypervisor operating systems.
+kvm_target_server_os_family_list:
+  - RedHat
+# hypervisor IP
+target_server: 10.167.53.5
+# Hypervisor network bridges
+# Network bridges required on the target server (hypervisor) for VM deployment
+mgmt_bridge: "br0"
+data_bridge1: "br7"
+# if the image support 2 data interfaces
+data_bridge2: "br7"
+#
+# Hypervisor libvirt VM image file location
+# Location to create VM images on target servers ex: /var/lib/libvirt/images
+images_path: "/var/lib/libvirt/images/"
+###
+# VM specific parameters
+# Minimum required virtual CPU cores.
+vm_vcpus: 5
+# VSTC RAM in GiB ex: 8 for 8GiB
+vm_ram: 2
+# VM network details
+vm_hostname: stcv_matrix
+vm_mgmt_ip: 10.167.53.80
+vm_mgmt_gateway: 10.167.53.1
+vm_mgmt_netmask: 255.255.255.0
+###
+# Spirent License Server
+spirent_license_server: 10.167.60.4
+###
+# Ansible
+# The IP addr or hostname of the Ansible host
+ansible_deployment_host: 10.167.53.5
+###
+# Misc params
+# NTP configuration
+# Note: Must be in dotted-decimal format
+ntp_server_list:
+  - 10.167.53.5
+# DNS configuration
+dns_server_list:
+  - 10.167.53.5
+dns_domain: vnspoc.net
