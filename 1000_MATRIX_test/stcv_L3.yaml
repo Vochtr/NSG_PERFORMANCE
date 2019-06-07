@@ -1,0 +1,47 @@
+stcv_vars:
+  # config_template should be referenced as an absolute path to the *.tcc or *.xml file
+  config_template: ~/nuage-cats/nuage-cats/cats_lib/spirent_templates/0011_2sblocks-bidi_vlan_ipv4.xml
+
+  # global configuration options
+  # can be rewritten on port level
+  chassis_address: 10.169.46.82  # IP address of STCV VM 4.91
+  slot: 1
+  vlan: 0
+  network_mode: static  # ports operation mode [static | dhcp]
+
+  # global generator config
+  generator:
+    test_duration: {{_Duration}}  # a value expressed in seconds (example: `10`)
+                      # or `CONTINUOUS` value meaning that a test will run until manually stopped
+
+  # ports configuration
+  ports:
+    # ordered list of ports. First element is port1, Second is port2
+    - num: 1  # port number in its location path //chassis/slot/port_number
+#      chassis_address: 10.167.61.52  # IP address of STCV 
+#      chassis_address: {{_STCV1_IP}}  # IP address of STCV VM
+#      ip: 10.10.2.2  # IP and GW needed if network_mode == static
+#      ip_prefix: 24
+#      gw: 10.10.2.1
+      ip: {{_port1_ip}}  # IP and GW needed if network_mode == static
+      ip_prefix: 24
+      gw: {{_port1_gw}}
+      vlan: {{_port1_vlan}}
+      streamblocks:
+        p1->p2_sb1:
+          frame_length: 1400
+          load: 0.3     # streamblock load (in Mbit/s)
+
+
+    - num: 2
+#      chassis_address: {{_STCV2_IP}}  # IP address of STCV VM
+#      chassis_address: 10.167.61.54  # IP address of STCV VM
+      ip: {{_port2_ip}}  # IP and GW needed if network_mode == static
+      ip_prefix: 24
+      gw: {{_port2_gw}}
+      vlan: {{_port2_vlan}}
+      streamblocks:
+        p2->p1_sb2:
+          frame_length: 1400
+          load: 0.3     # streamblock load (in Mbit/s)
+

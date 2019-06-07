@@ -1,0 +1,43 @@
+cd sf_playground/0400_MATRIX_test/
+
+rm -fR 01* 02* 03* 04* 05* 06* 07* 08* 09* 1*
+
+sed 's/${case}/010/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 010_test_NSG_C-1_to_X-1_20M_uni_2min_overlay_traffic.robot
+sed 's/${case}/011/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 011_test_NSG_E-1_to_X-1_50M_uni_2min_overlay_traffic.robot
+sed 's/${case}/012/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 012_test_NSG_E200-1_to_X-1_150M_uni_2min_overlay_traffic.robot
+sed 's/${case}/013/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 013_test_NSG_E300-1_to_X-1_200M_uni_2min_overlay_traffic.robot
+sed 's/${case}/014/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 014_test_NSG_X200-1_to_X-1_600M_uni_2min_overlay_traffic.robot
+
+sed 's/${case}/020/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 020_test_NSG_C-2_to_X-2_20M_bi_1min_overlay_traffic.robot
+sed 's/${case}/021/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 021_test_NSG_E-2_to_X-2_50M_bi_1min_overlay_traffic.robot
+sed 's/${case}/022/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 022_test_NSG_E200-2_to_X-2_150M_bi_1min_overlay_traffic.robot
+sed 's/${case}/023/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 023_test_NSG_E300-2_to_X-2_200M_bi_1min_overlay_traffic.robot
+sed 's/${case}/024/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 024_test_NSG_X200-2_to_X-2_600M_bi_1min_overlay_traffic.robot
+
+sed 's/${case}/030/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 030_test_NSG_y-1_to_X-1_10M_uni_10sec_overlay_traffic.robot
+
+sed 's/${case}/040/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 040_test_NSG_v01_to_v02_10M_bi_10sec_overlay_traffic.robot
+sed 's/${case}/041/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 041_test_NSG_v03_to_v04_10M_bi_10sec_overlay_traffic.robot
+sed 's/${case}/042/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 042_test_NSG_v06_to_v07_10M_bi_10sec_overlay_traffic.robot
+sed 's/${case}/043/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 043_test_NSG_v07_to_v08_10M_bi_10sec_overlay_traffic.robot
+
+sed 's/${case}/050/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 050_test_NSG_C-1_to_C-2_20M_bi_1min_overlay_traffic.robot
+
+sed 's/${case}/060/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 060_test_NSG_E-1_to_E-2_50M_bi_1min_overlay_traffic.robot
+
+sed 's/${case}/070/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 070_test_NSG_E200-1_to_E200-2_150M_bi_1min_overlay_traffic.robot
+
+sed 's/${case}/080/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 080_test_NSG_E300-1_to_E300-2_200M_bi_1min_overlay_traffic.robot
+
+sed 's/${case}/090/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 090_test_NSG_X200-1_to_X200-2_100M_bi_1min_overlay_traffic.robot
+sed 's/${case}/091/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 091_test_NSG_X200-1_to_X200-2_300M_bi_1min_overlay_traffic.robot
+sed 's/${case}/092/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 092_test_NSG_X200-1_to_X200-2_600M_bi_1min_overlay_traffic.robot
+sed 's/${case}/093/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 093_test_NSG_X200-1_to_X200-2_600M_uni_1hour_overlay_traffic.robot
+
+sed 's/${case}/100/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 100_test_NSG_X-1_to_X-2_100M_bi_1min_overlay_traffic.robot
+sed 's/${case}/101/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 101_test_NSG_X-1_to_X-2_500M_bi_1min_overlay_traffic.robot
+sed 's/${case}/102/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 102_test_NSG_X-1_to_X-2_1000M_bi_1min_overlay_traffic.robot
+sed 's/${case}/103/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 103_test_NSG_X-1_to_X-2_1000M_uni_1hour_overlay_traffic.robot
+sed 's/${case}/104/g' 000_NSGx_to_NSGx_overlay_traffic_test.robot > 104_test_NSG_X-1_to_X-2_1000M_uni_2hour_overlay_traffic.robot
+
+ls -l

@@ -1,0 +1,36 @@
+stcv_vars:
+  # config_template should be referenced as an absolute path to the *.tcc or *.xml file
+  # config_template: ~/nuage-cats/nuage-cats/cats_lib/spirent_templates/0010_ipv4_novlan.tcc
+  config_template: ~/nuage-cats/nuage-cats/cats_lib/spirent_templates/0010_2sblocks-bidi_novlan_ipv4.xml
+
+  # global configuration options
+  # can be rewritten on port level
+  chassis_address: {{_chassis}}     
+  slot: 1    # slot number which will be applied to all ports defined below
+  vlan: 0
+  network_mode: static  # ports operation mode [static | dhcp]
+
+  # global generator config
+  generator:
+    test_duration: 120  # a value expressed in seconds (example: `10`)
+ 
+  # ports configuration
+  ports:
+
+    # ordered list of ports.
+    - num: 1                        # port number in its location path //chassis/slot/port_number
+      ip: {{_ip_NSG1}}              # IP NSG1
+      gw: {{_gw_NSG1}}              # GW NSG1
+      ip_prefix: 24                 # prefix
+      streamblocks:
+        p1->p2_sb1:                 # streamblok 1
+          frame_length: {{_frame}}  # frame length in bytes 	
+          load: {{_load}}           # streamblock load (in Mbit/s)      
+    - num: 2                        # port number in its location path //chassis/slot/port_number
+      ip: {{_ip_NSG2}}              # IP NSG2
+      gw: {{_gw_NSG2}}              # GW NSG2
+      ip_prefix: 24                 # prefix
+      streamblocks:
+        p2->p1_sb2:                 # streamblok 2
+          frame_length: {{_frame}}  # frame length in bytes	
+          load: {{_load}}           # streamblock load (in Mbit/s)
